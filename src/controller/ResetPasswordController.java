@@ -1,5 +1,5 @@
 package controller; 
-public class ResetPasswordController  implements IController { 
+public class ResetPasswordController  extends IController { 
 	 
 	 
 	 

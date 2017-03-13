@@ -9,7 +9,7 @@ import model.User;
 import utility.*;
 import view.ActionEvent;
 import view.HomeView;
-public class LoginController  implements IController { 
+public class LoginController  extends IController { 
 	 
 	 
 		private ValidationUtil valUtil; 

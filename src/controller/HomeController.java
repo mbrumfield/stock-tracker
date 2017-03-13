@@ -2,18 +2,29 @@ package controller;
 import utility.*;
 import model.*;
 import view.*;
-public class HomeController  implements IController { 
+public class HomeController  extends IController { 
 		private BackgroundService bckgrnSer = null; 
-	 
-		private CommonUtil comUtil = null;
-		private User user;
 		
+		private CommonUtil comUtil = null;
+		private SearchStockController ssCont;
+		private String userName;
 		
 		public void switchContext(User user)
 		{
-			this.user = user;
+			ssCont = new SearchStockController();
+			System.out.println(user.getUsername());
+			setUser(user);
 			HomeView view = new HomeView();
-			view.start();
+			view.start(this);
+		}
+		
+		
+	
+
+
+		public void switchToSearchContext()
+		{
+			ssCont.switchContext();
 		}
 	 
 } 

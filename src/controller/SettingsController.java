@@ -1,4 +1,4 @@
 package controller; 
-public class SettingsController  implements IController { 
+public class SettingsController  extends IController { 
 	  
 } 

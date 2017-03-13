@@ -7,7 +7,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import controller.HomeController;
 import controller.IController;
+import controller.SearchStockController;
 
 public class HomeView   implements IView { 
 	 
@@ -24,6 +26,7 @@ public class HomeView   implements IView {
 	 
 		private StockDetailsView stockDetailsView;  
 	 
+		private HomeController hCont;
 	 
 //		public final TreeTableView getStockListView() {
 //			return this.stockListView;
@@ -78,8 +81,9 @@ public class HomeView   implements IView {
 			
 		} 
 		
-		public void start()
+		public void start(HomeController hCont)
 		{
+			this.hCont = hCont;
 			frame.getContentPane().removeAll();
 			JPanel panel = new JPanel();
 			JButton searchStockButton = new JButton();
@@ -100,7 +104,7 @@ public class HomeView   implements IView {
 		    {
 				@Override
 				public void actionPerformed(java.awt.event.ActionEvent action) {
-					System.out.println("hey!");
+					hCont.switchToSearchContext();
 				}
 		    });
 		}

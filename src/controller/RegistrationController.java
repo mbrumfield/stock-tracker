@@ -1,7 +1,7 @@
 package controller; 
 import utility.*;
 import view.ActionEvent;
-public class RegistrationController  implements IController { 
+public class RegistrationController  extends IController { 
 	 
 	 
 	private ValidationUtil validationUtil; 

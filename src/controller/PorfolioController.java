@@ -1,5 +1,5 @@
 package controller; 
-public class PorfolioController  implements IController { 
+public class PorfolioController  extends IController { 
 	 
 	 
 	 
