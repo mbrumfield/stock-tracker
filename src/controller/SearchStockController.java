@@ -20,7 +20,8 @@ public class SearchStockController {
 	
 	public String[][] getData()
 	{
-		return null;
+		String[][] data = {{"a", "a", "a", "a", "a"}};
+		return data;
 	}
 
 }
