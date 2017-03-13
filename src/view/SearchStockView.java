@@ -50,17 +50,21 @@ public class SearchStockView implements IView {
 		table = new JTable(this.tModel);
 		scroll = new JScrollPane(table);
 		
+		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 0;
 		c.gridy = 0;
-		c.weightx = 1;
+		c.weightx = 0.75;
 		c.weighty = 1;
 		panel.add(field, c);
+		
+		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 1;
 		c.gridy = 0;
 		c.weightx = 1;
 		c.weighty = 1;
 		panel.add(button, c);
 		
+		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 0;
 		c.gridy = 2;
 		c.weightx = 2;
