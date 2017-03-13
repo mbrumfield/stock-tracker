@@ -5,8 +5,10 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
+import model.User;
 import utility.*;
 import view.ActionEvent;
+import view.HomeView;
 public class LoginController  implements IController { 
 	 
 	 
@@ -19,7 +21,10 @@ public class LoginController  implements IController {
 		 boolean logOn = DatabaseUtil.canLogOn(event);
 		 if(logOn)
 		 {
-			 JOptionPane.showMessageDialog(null,"Logged In");
+			 HomeController hCont = new HomeController();
+			 User user = new User();
+			 user.setUsername(event.username);
+			 hCont.switchContext(user);
 		 }
 		 else
 		 {

@@ -1,5 +1,12 @@
 package view;
 
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import controller.IController;
 
 public class HomeView   implements IView { 
@@ -70,5 +77,32 @@ public class HomeView   implements IView {
 			// TODO Auto-generated method stub
 			
 		} 
+		
+		public void start()
+		{
+			frame.getContentPane().removeAll();
+			JPanel panel = new JPanel();
+			JButton searchStockButton = new JButton();
+			searchStockButton.setText("Search Stock");
+			addActionListenerSearch(searchStockButton);
+			panel.setLayout(new FlowLayout());
+			panel.add(searchStockButton);
+			
+			frame.add(panel);
+			frame.pack();
+			frame.setVisible(true);
+		}
+		
+		
+		private void addActionListenerSearch(JButton searchStockButton)
+		{
+			searchStockButton.addActionListener(new ActionListener()
+		    {
+				@Override
+				public void actionPerformed(java.awt.event.ActionEvent action) {
+					System.out.println("hey!");
+				}
+		    });
+		}
 	 
 } 

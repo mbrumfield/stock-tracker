@@ -7,7 +7,6 @@ public interface IView  {
 	 
 	 
 		IController controller = new IController() {}; 
-		
 		JFrame frame = new JFrame();
 	 
 	 
